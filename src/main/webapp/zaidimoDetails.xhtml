@@ -20,15 +20,15 @@
         <h:inputText a:placeholder="Įveskite serijinį numerį" value="#{updateZaidimas.zaidimas.serijinisNr}" required="true" />
         <br/>
         <h:commandButton value="atnaujinti" action="#{updateZaidimas.updateZaidimasName()}">
-            <f:param name="instrumentoId" value="#{updateZaidimas.zaidimas.id}" />
+            <f:param name="zaidimoId" value="#{updateZaidimas.zaidimas.id}" />
         </h:commandButton>
         <h:outputText value="Value was already modified by other user. If you want to override it - try again" rendered="#{param['error'] == 'optimistic-lock-exception'}" />
     </h:form>
     <h:form>
-        <h:inputText a:placeholder="Aksesuaro pavadinimas" value="#{atsiliepimaiForZaidimas.atsiliepimasToCreate.aprasymas}" required="true" />
-        <h:commandButton value="Pridėti aksesuarą"
+        <h:inputText a:placeholder="Atsiliepimas" value="#{atsiliepimaiForZaidimas.atsiliepimasToCreate.aprasymas}" required="true" />
+        <h:commandButton value="Pridėti komentara"
                          actionListener="#{atsiliepimaiForZaidimas.addAtsiliepimas(atsiliepimaiForZaidimas.atsiliepimasToCreate.aprasymas)}">
-            <f:param name="instrumentoId" value="#{atsiliepimaiForZaidimas.zaidimas.id}"/>
+            <f:param name="zaidimoId" value="#{atsiliepimaiForZaidimas.zaidimas.id}"/>
 
         </h:commandButton>
     </h:form>

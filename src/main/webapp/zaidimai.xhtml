@@ -39,7 +39,7 @@
         <h:commandButton value="Pridėti"
                          actionListener="#{zaidimasForCategory.createZaidimas}"
                          action="#{'zaidimai?faces-redirect=true&amp;kategorijosId='.concat(zaidimasForCategory.kategorija.id)}">
-                <f:param name="kategorijosId" value="#{instrumentForCategory.kategorija.id}" />
+                <f:param name="kategorijosId" value="#{zaidimasForCategory.kategorija.id}" />
         </h:commandButton>
     </h:form>
     <br/>

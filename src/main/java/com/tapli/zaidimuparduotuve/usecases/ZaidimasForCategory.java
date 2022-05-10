@@ -35,8 +35,8 @@ public class ZaidimasForCategory implements Serializable {
     public void init() {
         Map<String, String> requestParameters =
                 FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
-        Integer zaidimasId = Integer.parseInt(requestParameters.get("zaidimasId"));
-        this.kategorija = kategorijosDAO.findOne(zaidimasId);
+        Integer zaidimoId = Integer.parseInt(requestParameters.get("kategorijosId"));
+        this.kategorija = kategorijosDAO.findOne(zaidimoId);
     }
 
     @Transactional

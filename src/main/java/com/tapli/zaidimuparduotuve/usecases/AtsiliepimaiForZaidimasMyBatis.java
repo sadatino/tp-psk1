@@ -38,8 +38,8 @@ public class AtsiliepimaiForZaidimasMyBatis {
     public void init() {
         Map<String, String> requestParameters =
                 FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
-        Integer zaidimasId = Integer.parseInt(requestParameters.get("zaidimoId"));
-        this.zaidimas = zaidimasMapper.selectByPrimaryKey(zaidimasId);
+        Integer zaidimoId = Integer.parseInt(requestParameters.get("zaidimoId"));
+        this.zaidimas = zaidimasMapper.selectByPrimaryKey(zaidimoId);
     }
 
     @Transactional

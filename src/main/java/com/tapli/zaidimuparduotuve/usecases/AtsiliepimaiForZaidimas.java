@@ -33,8 +33,8 @@ public class AtsiliepimaiForZaidimas {
     public void init(){
         Map<String, String> requestParameters =
                 FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
-        Integer zaidimasId = Integer.parseInt(requestParameters.get("zaidimoId"));
-        this.zaidimas = zaidimaiDAO.findOne(zaidimasId);
+        Integer zaidimoId = Integer.parseInt(requestParameters.get("zaidimoId"));
+        this.zaidimas = zaidimaiDAO.findOne(zaidimoId);
     }
 
     @Transactional
